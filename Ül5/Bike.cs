@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Ül5
 {
-    public class Jalgratas: TranspordiVahend
+    public class Bicycle : Transportation
     {
-        public string SadulaKõrgus { get; set; }
+        public string SaddleHeight { get; set; }
     }
 }

@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Ül5
 {
-    public class TranspordiVahend
+    public class Transportation
     {
         public string Id { get; set; }
-        public string Tootja { get; set; }
-        public string ReisijateArv { get; set; }
+        public string Manufacturer { get; set; }
+        public string NrOfPassengers { get; set; }
     }
 }
