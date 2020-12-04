@@ -23,7 +23,7 @@ namespace Tests
                 NrOfDoors = "5",
                 FuelTankCapacity = "5l",
                 SaddleHeight = null,
-                Type = "Auto"
+                Type = "Car"
             });
             _dataTable.Add(new Data()
             {
@@ -33,7 +33,7 @@ namespace Tests
                 NrOfDoors = null,
                 FuelTankCapacity = null,
                 SaddleHeight = "5.2 cm",
-                Type = "Jalgratas"
+                Type = "Bicycle"
             });
             _dataTable.Add(new Data()
             {
@@ -43,7 +43,7 @@ namespace Tests
                 NrOfDoors = "5",
                 FuelTankCapacity = "4l",
                 SaddleHeight = null,
-                Type = "Auto"
+                Type = "Car"
             });
             _dataTable.Add(new Data()
             {
@@ -53,7 +53,7 @@ namespace Tests
                 NrOfDoors = null,
                 FuelTankCapacity = null,
                 SaddleHeight = "5.5 cm",
-                Type = "Jalgratas"
+                Type = "Bicycle"
             });
             foreach (var e in _dataTable) {
                 Console.WriteLine("INSERT INTO Data VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6})",
@@ -100,7 +100,7 @@ namespace Tests
             List<Car> cars = new List<Car>();
             foreach (var d in data)
             {
-                if (d.Type == "Auto")
+                if (d.Type == "Car")
                 {
                     cars.Add(new Car()
                     {
@@ -125,7 +125,7 @@ namespace Tests
             List<Bicycle> bicycles = new List<Bicycle>();
             foreach (var d in data)
             {
-                if (d.Type == "Jalgratas")
+                if (d.Type == "Bicycle")
                 {
                     bicycles.Add(new Bicycle()
                     {
