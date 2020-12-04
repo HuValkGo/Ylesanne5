@@ -2,9 +2,9 @@
 namespace Ül5 {
     class Program {
         static void Main(string[] args) {
-            DataController d = new DataController();
+            TransportationsController d = new TransportationsController();
             d.AddData();
-            d.GetDataTable();
+            d.GetTransportationsTable();
             d.GetBicycleDataTable();
             d.GetCarDataTable();
         }

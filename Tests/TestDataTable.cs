@@ -9,14 +9,14 @@ namespace Tests
     [TestClass]
     public class TestDataTable
     {
-        private List<Data> _dataTable;
+        private List<Transportations> _transportations;
         [TestInitialize]
         public void Setup() {
-            Console.WriteLine("CREATE TABLE Data" +
+            Console.WriteLine("CREATE TABLE Transportations" +
                           "(Id TEXT PRIMARY KEY, Manufacturer TEXT, NrOfPassengers TEXT," +
                           "NrOfDoors TEXT, FuelTankCapacity TEXT, SaddleHeight TEXT, Type TEXT");
-            _dataTable = new List<Data>();
-            _dataTable.Add(new Data() {
+            _transportations = new List<Transportations>();
+            _transportations.Add(new Transportations() {
                 Id = "0",
                 Manufacturer = "Ford",
                 NrOfPassengers = "5",
@@ -25,7 +25,7 @@ namespace Tests
                 SaddleHeight = null,
                 Type = "Car"
             });
-            _dataTable.Add(new Data()
+            _transportations.Add(new Transportations()
             {
                 Id = "1",
                 Manufacturer = "Scott",
@@ -35,7 +35,7 @@ namespace Tests
                 SaddleHeight = "5.2 cm",
                 Type = "Bicycle"
             });
-            _dataTable.Add(new Data()
+            _transportations.Add(new Transportations()
             {
                 Id = "2",
                 Manufacturer = "Audi",
@@ -45,7 +45,7 @@ namespace Tests
                 SaddleHeight = null,
                 Type = "Car"
             });
-            _dataTable.Add(new Data()
+            _transportations.Add(new Transportations()
             {
                 Id = "3",
                 Manufacturer = "Merida",
@@ -55,16 +55,16 @@ namespace Tests
                 SaddleHeight = "5.5 cm",
                 Type = "Bicycle"
             });
-            foreach (var e in _dataTable) {
-                Console.WriteLine("INSERT INTO Data VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6})",
+            foreach (var e in _transportations) {
+                Console.WriteLine("INSERT INTO Transportations VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6})",
                     e.Id, e.Manufacturer,e.NrOfPassengers,e.NrOfDoors,e.FuelTankCapacity,e.SaddleHeight,e.Type);
             }
         }
         [TestMethod]
-        public void DataTableTest()
+        public void TransportationsTableTest()
         {
-            var data = DataTable();
-            Console.WriteLine("SELECT * from Data");
+            var data = TransportationsTable();
+            Console.WriteLine("SELECT * from Transportations");
             Assert.AreEqual(4,data.Count);
             Assert.AreEqual("Scott",data[1].Manufacturer);
             Assert.AreEqual(null, data[3].NrOfDoors);
@@ -88,15 +88,15 @@ namespace Tests
             Assert.AreEqual("5", data[1].NrOfDoors);
         }
 
-        private List<Data> DataTable() {
-            return _dataTable;
+        private List<Transportations> TransportationsTable() {
+            return _transportations;
         }
 
         private List<Car> CarDataTable() {
             Console.WriteLine("CREATE TABLE Car" +
                               "(Id TEXT PRIMARY KEY, Manufacturer TEXT, NrOfPassengers TEXT," +
                               " NrOfDoors TEXT, FuelTankCapacity TEXT");
-            var data = DataTable();
+            var data = TransportationsTable();
             List<Car> cars = new List<Car>();
             foreach (var d in data)
             {
@@ -110,7 +110,7 @@ namespace Tests
                         NrOfDoors = d.NrOfDoors,
                         FuelTankCapacity = d.FuelTankCapacity
                     });
-                    Console.WriteLine("INSERT INTO Data VALUES ({0}, {1}, {2}, {3}, {4})",
+                    Console.WriteLine("INSERT INTO Car VALUES ({0}, {1}, {2}, {3}, {4})",
                         d.Id, d.Manufacturer, d.NrOfPassengers, d.NrOfDoors, d.FuelTankCapacity);
                 }
             }
@@ -121,7 +121,7 @@ namespace Tests
             Console.WriteLine("CREATE TABLE Bicycle" +
                               "(Id TEXT PRIMARY KEY, Manufacturer TEXT, NrOfPassengers TEXT," +
                               " SaddleHeight TEXT");
-            var data = DataTable();
+            var data = TransportationsTable();
             List<Bicycle> bicycles = new List<Bicycle>();
             foreach (var d in data)
             {
@@ -134,7 +134,7 @@ namespace Tests
                         NrOfPassengers = d.NrOfPassengers,
                         SaddleHeight = d.SaddleHeight
                     });
-                    Console.WriteLine("INSERT INTO Data VALUES ({0}, {1}, {2}, {3})",
+                    Console.WriteLine("INSERT INTO Bicycle VALUES ({0}, {1}, {2}, {3})",
                         d.Id, d.Manufacturer, d.NrOfPassengers, d.SaddleHeight);
                 }
             }
