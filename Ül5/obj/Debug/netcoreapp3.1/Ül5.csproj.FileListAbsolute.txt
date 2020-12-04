@@ -11,3 +11,16 @@ C:\Users\Kasutaja\source\repos\Ül5\Ül5\obj\Debug\netcoreapp3.1\Ül5.csproj.Cor
 C:\Users\Kasutaja\source\repos\Ül5\Ül5\obj\Debug\netcoreapp3.1\Ül5.dll
 C:\Users\Kasutaja\source\repos\Ül5\Ül5\obj\Debug\netcoreapp3.1\Ül5.pdb
 C:\Users\Kasutaja\source\repos\Ül5\Ül5\obj\Debug\netcoreapp3.1\Ül5.genruntimeconfig.cache
+C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\bin\Debug\netcoreapp3.1\Ül5.exe
+C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\bin\Debug\netcoreapp3.1\Ül5.deps.json
+C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\bin\Debug\netcoreapp3.1\Ül5.runtimeconfig.json
+C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\bin\Debug\netcoreapp3.1\Ül5.runtimeconfig.dev.json
+C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\bin\Debug\netcoreapp3.1\Ül5.dll
+C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\bin\Debug\netcoreapp3.1\Ül5.pdb
+C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\obj\Debug\netcoreapp3.1\Ül5.csprojAssemblyReference.cache
+C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\obj\Debug\netcoreapp3.1\Ül5.AssemblyInfoInputs.cache
+C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\obj\Debug\netcoreapp3.1\Ül5.AssemblyInfo.cs
+C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\obj\Debug\netcoreapp3.1\Ül5.csproj.CoreCompileInputs.cache
+C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\obj\Debug\netcoreapp3.1\Ül5.dll
+C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\obj\Debug\netcoreapp3.1\Ül5.pdb
+C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\obj\Debug\netcoreapp3.1\Ül5.genruntimeconfig.cache
