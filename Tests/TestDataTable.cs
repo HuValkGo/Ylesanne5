@@ -9,14 +9,14 @@ namespace Tests
     [TestClass]
     public class TestDataTable
     {
-        private List<Transportations> _transportations;
+        private List<Vechicles> _vechicles;
         [TestInitialize]
         public void Setup() {
-            Console.WriteLine("CREATE TABLE Transportations" +
+            Console.WriteLine("CREATE TABLE Vechicles" +
                           "(Id TEXT PRIMARY KEY, Manufacturer TEXT, NrOfPassengers TEXT," +
                           "NrOfDoors TEXT, FuelTankCapacity TEXT, SaddleHeight TEXT, Type TEXT");
-            _transportations = new List<Transportations>();
-            _transportations.Add(new Transportations() {
+            _vechicles = new List<Vechicles>();
+            _vechicles.Add(new Vechicles() {
                 Id = "0",
                 Manufacturer = "Ford",
                 NrOfPassengers = "5",
@@ -25,7 +25,7 @@ namespace Tests
                 SaddleHeight = null,
                 Type = "Car"
             });
-            _transportations.Add(new Transportations()
+            _vechicles.Add(new Vechicles()
             {
                 Id = "1",
                 Manufacturer = "Scott",
@@ -35,7 +35,7 @@ namespace Tests
                 SaddleHeight = "5.2 cm",
                 Type = "Bicycle"
             });
-            _transportations.Add(new Transportations()
+            _vechicles.Add(new Vechicles()
             {
                 Id = "2",
                 Manufacturer = "Audi",
@@ -45,7 +45,7 @@ namespace Tests
                 SaddleHeight = null,
                 Type = "Car"
             });
-            _transportations.Add(new Transportations()
+            _vechicles.Add(new Vechicles()
             {
                 Id = "3",
                 Manufacturer = "Merida",
@@ -55,16 +55,16 @@ namespace Tests
                 SaddleHeight = "5.5 cm",
                 Type = "Bicycle"
             });
-            foreach (var e in _transportations) {
-                Console.WriteLine("INSERT INTO Transportations VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6})",
+            foreach (var e in _vechicles) {
+                Console.WriteLine("INSERT INTO Vechicles VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6})",
                     e.Id, e.Manufacturer,e.NrOfPassengers,e.NrOfDoors,e.FuelTankCapacity,e.SaddleHeight,e.Type);
             }
         }
         [TestMethod]
-        public void TransportationsTableTest()
+        public void VechiclesTableTest()
         {
-            var data = TransportationsTable();
-            Console.WriteLine("SELECT * from Transportations");
+            var data = VechiclesTable();
+            Console.WriteLine("SELECT * from Vechicles");
             Assert.AreEqual(4,data.Count);
             Assert.AreEqual("Scott",data[1].Manufacturer);
             Assert.AreEqual(null, data[3].NrOfDoors);
@@ -72,7 +72,7 @@ namespace Tests
         [TestMethod]
         public void BicycleTableTest()
         {
-            var data = BicycleDataTable();
+            var data = BicycleTable();
             Console.WriteLine("SELECT * from Bicycle");
             Assert.AreEqual(2, data.Count);
             Assert.AreEqual("5.2 cm", data[0].SaddleHeight);
@@ -81,22 +81,22 @@ namespace Tests
         [TestMethod]
         public void CarTableTest()
         {
-            var data = CarDataTable();
+            var data = CarTable();
             Console.WriteLine("SELECT * from Car");
             Assert.AreEqual(2, data.Count);
             Assert.AreEqual("Audi", data[1].Manufacturer);
             Assert.AreEqual("5", data[1].NrOfDoors);
         }
 
-        private List<Transportations> TransportationsTable() {
-            return _transportations;
+        private List<Vechicles> VechiclesTable() {
+            return _vechicles;
         }
 
-        private List<Car> CarDataTable() {
+        private List<Car> CarTable() {
             Console.WriteLine("CREATE TABLE Car" +
                               "(Id TEXT PRIMARY KEY, Manufacturer TEXT, NrOfPassengers TEXT," +
                               " NrOfDoors TEXT, FuelTankCapacity TEXT");
-            var data = TransportationsTable();
+            var data = VechiclesTable();
             List<Car> cars = new List<Car>();
             foreach (var d in data)
             {
@@ -117,11 +117,11 @@ namespace Tests
             return cars;
         }
 
-        private List<Bicycle> BicycleDataTable() {
+        private List<Bicycle> BicycleTable() {
             Console.WriteLine("CREATE TABLE Bicycle" +
                               "(Id TEXT PRIMARY KEY, Manufacturer TEXT, NrOfPassengers TEXT," +
                               " SaddleHeight TEXT");
-            var data = TransportationsTable();
+            var data = VechiclesTable();
             List<Bicycle> bicycles = new List<Bicycle>();
             foreach (var d in data)
             {

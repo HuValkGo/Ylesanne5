@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ül5
 {
-    public class Transportations
+    public class Vechicles
     {
         public string Id { get; set; }
         public string Manufacturer { get; set; }

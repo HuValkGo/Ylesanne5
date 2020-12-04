@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kasutaja\\Source\\Repos\\Ylesanne5\\Ül5\\Ül5.csproj": {}
+    "C:\\Users\\Kasutaja\\source\\repos\\Ül5\\Ül5\\Ül5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kasutaja\\Source\\Repos\\Ylesanne5\\Ül5\\Ül5.csproj": {
+    "C:\\Users\\Kasutaja\\source\\repos\\Ül5\\Ül5\\Ül5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kasutaja\\Source\\Repos\\Ylesanne5\\Ül5\\Ül5.csproj",
+        "projectUniqueName": "C:\\Users\\Kasutaja\\source\\repos\\Ül5\\Ül5\\Ül5.csproj",
         "projectName": "Ül5",
-        "projectPath": "C:\\Users\\Kasutaja\\Source\\Repos\\Ylesanne5\\Ül5\\Ül5.csproj",
+        "projectPath": "C:\\Users\\Kasutaja\\source\\repos\\Ül5\\Ül5\\Ül5.csproj",
         "packagesPath": "C:\\Users\\Kasutaja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kasutaja\\Source\\Repos\\Ylesanne5\\Ül5\\obj\\",
+        "outputPath": "C:\\Users\\Kasutaja\\source\\repos\\Ül5\\Ül5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kasutaja\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -52,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

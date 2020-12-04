@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 
 namespace Ül5 {
-    public class TransportationsController {
+    public class VechiclesController {
 
-        private List<Transportations> _transportations;
+        private List<Vechicles> _vechicles;
 
         public void AddData() {
-            _transportations= new List<Transportations>();
-            _transportations.Add(new Transportations() {
+            _vechicles = new List<Vechicles>();
+            _vechicles.Add(new Vechicles() {
                 Id = "0",
                 FuelTankCapacity = "5l",
                 NrOfPassengers = "5",
@@ -16,14 +16,14 @@ namespace Ül5 {
                 NrOfDoors = "5",
                 Type = "Car"
             });
-            _transportations.Add(new Transportations() {
+            _vechicles.Add(new Vechicles() {
                 Id = "1",
                 Manufacturer = "Scott",
                 NrOfPassengers = "1",
                 SaddleHeight = "5.2 cm",
                 Type = "Bicycle"
             });
-            _transportations.Add(new Transportations() {
+            _vechicles.Add(new Vechicles() {
                 Id = "2",
                 FuelTankCapacity = "4l",
                 NrOfPassengers = "5",
@@ -31,7 +31,7 @@ namespace Ül5 {
                 NrOfDoors = "5",
                 Type = "Car"
             });
-            _transportations.Add(new Transportations() {
+            _vechicles.Add(new Vechicles() {
                 Id = "3",
                 Manufacturer = "Merida",
                 NrOfPassengers = "1",
@@ -41,12 +41,12 @@ namespace Ül5 {
 
         }
 
-        private List<Transportations> TransportationsTable() {
-            return _transportations;
+        private List<Vechicles> VechiclesTable() {
+            return _vechicles;
         }
 
-        private List<Car> CarDataTable() {
-            var data = TransportationsTable();
+        private List<Car> CarTable() {
+            var data = VechiclesTable();
             List<Car> cars = new List<Car>();
             foreach (var d in data) {
                 if (d.Type == "Car") {
@@ -63,8 +63,8 @@ namespace Ül5 {
             return cars;
         }
 
-        private List<Bicycle> BicycleDataTable() {
-            var data = TransportationsTable();
+        private List<Bicycle> BicycleTable() {
+            var data = VechiclesTable();
             List<Bicycle> bicycles = new List<Bicycle>();
             foreach (var d in data) {
                 if (d.Type == "Bicycle") {
@@ -80,8 +80,8 @@ namespace Ül5 {
             return bicycles;
         }
 
-        public void GetBicycleDataTable() {
-            foreach (var d in BicycleDataTable()) {
+        public void GetBicycleTable() {
+            foreach (var d in BicycleTable()) {
                 Console.Write(" Id: " + d.Id +
                               " NrOfPassengers: " + d.NrOfPassengers +
                               " Manufacturer: " + d.Manufacturer +
@@ -92,8 +92,8 @@ namespace Ül5 {
             Console.WriteLine();
         }
 
-        public void GetTransportationsTable() {
-            foreach (var a in TransportationsTable()) {
+        public void GetVechiclesTable() {
+            foreach (var a in VechiclesTable()) {
                 Console.Write(" Id: " + a.Id +
                               " NrOfPassengers: " + a.NrOfPassengers +
                               " Manufacturer: " + a.Manufacturer +
@@ -107,8 +107,8 @@ namespace Ül5 {
             Console.WriteLine();
         }
 
-        public void GetCarDataTable() {
-            foreach (var a in CarDataTable()) {
+        public void GetCarTable() {
+            foreach (var a in CarTable()) {
                 Console.Write(" Id: " + a.Id +
                               " NrOfPassengers: " + a.NrOfPassengers +
                               " Manufacturer: " + a.Manufacturer +
