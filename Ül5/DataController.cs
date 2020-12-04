@@ -14,14 +14,14 @@ namespace Ül5 {
                 NrOfPassengers = "5",
                 Manufacturer = "Ford",
                 NrOfDoors = "5",
-                Type = "Auto"
+                Type = "Car"
             });
             _dataTable.Add(new Data() {
                 Id = "1",
                 Manufacturer = "Scott",
                 NrOfPassengers = "1",
                 SaddleHeight = "5.2 cm",
-                Type = "Jalgratas"
+                Type = "Bicycle"
             });
             _dataTable.Add(new Data() {
                 Id = "2",
@@ -29,14 +29,14 @@ namespace Ül5 {
                 NrOfPassengers = "5",
                 Manufacturer = "Audi",
                 NrOfDoors = "5",
-                Type = "Auto"
+                Type = "Car"
             });
             _dataTable.Add(new Data() {
                 Id = "3",
                 Manufacturer = "Merida",
                 NrOfPassengers = "1",
                 SaddleHeight = "5.5 cm",
-                Type = "Jalgratas"
+                Type = "Bicycle"
             });
 
         }
@@ -49,7 +49,7 @@ namespace Ül5 {
             var data = DataTable();
             List<Car> cars = new List<Car>();
             foreach (var d in data) {
-                if (d.Type == "Auto") {
+                if (d.Type == "Car") {
                     cars.Add(new Car() {
                         Id = d.Id,
                         FuelTankCapacity = d.FuelTankCapacity,
@@ -67,7 +67,7 @@ namespace Ül5 {
             var data = DataTable();
             List<Bicycle> bicycles = new List<Bicycle>();
             foreach (var d in data) {
-                if (d.Type == "Jalgratas") {
+                if (d.Type == "Bicycle") {
                     bicycles.Add(new Bicycle() {
                         Id = d.Id,
                         SaddleHeight = d.SaddleHeight,
