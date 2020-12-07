@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ül5
-{
-    public class Vechicles
-    {
+namespace Ül5 {
+    public class Vechicles {
         public string Id { get; set; }
         public string Manufacturer { get; set; }
         public string NrOfPassengers { get; set; }

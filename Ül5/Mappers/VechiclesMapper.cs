@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 
-namespace Ül5
-{
-    public class VechiclesMapper
-    {
-        public List<Vechicles> Mapper(DataTable db)
-        {
+namespace Ül5 {
+    public class VechiclesMapper {
+        public List<Vechicles> GetVechicles(DataTable db) {
             List<Vechicles> vechicles = new List<Vechicles>();
             for (int i = 0; i < db.Rows.Count; i++) {
 
                 var obj = db.Rows[i].ItemArray;
-                vechicles.Add( new Vechicles() {
+                vechicles.Add(new Vechicles() {
                     Id = obj[0].ToString(),
                     Manufacturer = obj[1].ToString(),
                     NrOfPassengers = obj[2].ToString(),
@@ -23,13 +20,13 @@ namespace Ül5
                     Type = obj[6].ToString()
                 });
             }
+
             return vechicles;
         }
 
         public Vechicles findById(string id, DataTable db) {
             Vechicles vechicle = new Vechicles();
-            for (int i = 0; i < db.Rows.Count; i++)
-            {
+            for (int i = 0; i < db.Rows.Count; i++) {
                 var obj = db.Rows[i].ItemArray;
                 if (id == obj[0].ToString()) {
                     vechicle.Id = obj[0].ToString();
