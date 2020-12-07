@@ -10,7 +10,7 @@ namespace Tests
     [TestClass]
     public class TestDataTable
     {
-        private VechiclesMapper _vechiclesMapper= new VechiclesMapper();
+        private VechiclesMapper _vechiclesMapper;
         private BicycleMapper _bicycleMapper;
         private CarMapper _carMapper;
         private DataTable db;
@@ -37,16 +37,20 @@ namespace Tests
         public void VechiclesMapperTest()
         {
             var data = Vechicles();
+
             Assert.AreEqual(4,data.Count);
             Assert.AreEqual("Scott",data[1].Manufacturer);
             Assert.AreEqual("", data[3].NrOfDoors);
+
             var findByIdData = _vechiclesMapper.findById("3",db);
+
             Assert.AreEqual("3",findByIdData.Id);
             Assert.AreEqual("Merida", findByIdData.Manufacturer);
         }
 
         private void getVechicles() {
-             _vechicles =_vechiclesMapper.Mapper(db);
+            _vechiclesMapper = new VechiclesMapper();
+            _vechicles =_vechiclesMapper.Mapper(db);
         }
         private List<Vechicles> Vechicles() {
             return _vechicles;
@@ -56,6 +60,7 @@ namespace Tests
         public void BicycleMapperTest() {
             _bicycleMapper = new BicycleMapper();
             var data = _bicycleMapper.Mapper(Vechicles());
+
             Assert.AreEqual(2, data.Count);
             Assert.AreEqual("Scott", data[0].Manufacturer);
             Assert.AreEqual("1", data[1].NrOfPassengers);
