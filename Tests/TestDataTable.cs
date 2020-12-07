@@ -8,15 +8,15 @@ using Ül5;
 namespace Tests {
     [TestClass]
     public class TestDataTable {
-        private VechiclesMapper _vechiclesMapper;
+        private VehiclesMapper _vehiclesMapper;
         private BicycleMapper _bicycleMapper;
         private CarMapper _carMapper;
         private DataTable db;
-        private List<Vechicles> _vechicles;
+        private List<Vehicles> _vehicles;
 
         [TestInitialize]
         public void Setup() {
-            db = new DataTable("Vechicles");
+            db = new DataTable("Vehicles");
             db.Clear();
             db.Columns.Add("ID", typeof(string));
             db.Columns.Add("Manufacturer", typeof(string));
@@ -29,32 +29,32 @@ namespace Tests {
             db.Rows.Add("1", "Scott", "1", null, null, "5.2cm", "Bicycle");
             db.Rows.Add("2", "Audi", "4", "5", "4l", null, "Car");
             db.Rows.Add("3", "Merida", "1", null, null, "5.5cm", "Bicycle");
-            getVechicles();
+            getVehicles();
         }
 
         [TestMethod]
-        public void VechiclesMapperTest() {
-            var data = Vechicles();
-            var findByIdData = _vechiclesMapper.findById("3", db);
+        public void VehiclesMapperTest() {
+            var data = Vehicles();
+            var findByIdData = _vehiclesMapper.findById("3", db);
 
             Assert.AreEqual(4, data.Count);
             Assert.AreEqual("3", findByIdData.Id);
             Assert.AreEqual("Merida", findByIdData.Manufacturer);
         }
 
-        private void getVechicles() {
-            _vechiclesMapper = new VechiclesMapper();
-            _vechicles = _vechiclesMapper.GetVechicles(db);
+        private void getVehicles() {
+            _vehiclesMapper = new VehiclesMapper();
+            _vehicles = _vehiclesMapper.GetVehicles(db);
         }
 
-        private List<Vechicles> Vechicles() {
-            return _vechicles;
+        private List<Vehicles> Vehicles() {
+            return _vehicles;
         }
 
         [TestMethod]
         public void BicycleMapperTest() {
             _bicycleMapper = new BicycleMapper();
-            var data = _bicycleMapper.GetBicycles(Vechicles());
+            var data = _bicycleMapper.GetBicycles(Vehicles());
             var findBicycleById = _bicycleMapper.findById("1", data);
 
             Assert.AreEqual(2, data.Count);
@@ -67,7 +67,7 @@ namespace Tests {
         [TestMethod]
         public void CarMapperTest() {
             _carMapper = new CarMapper();
-            var data = _carMapper.GetCars(Vechicles());
+            var data = _carMapper.GetCars(Vehicles());
             var findCarById = _carMapper.findById("2", data);
 
             Assert.AreEqual(2, data.Count);
@@ -76,11 +76,12 @@ namespace Tests {
             Assert.AreEqual("4l", findCarById.FuelTankCapacity);
 
             db.Rows.Add("4", "BMW", "7", "5", "100l", null, "Car");
-            getVechicles();
-            var newData = _carMapper.GetCars(Vechicles());
+            getVehicles();
+            var newData = _carMapper.GetCars(Vehicles());
+            var findCar2ById = _carMapper.findById("4", newData);
 
             Assert.AreEqual(3, newData.Count);
-            Assert.AreEqual("BMW", newData[2].Manufacturer);
+            Assert.AreEqual("BMW", findCar2ById.Manufacturer);
         }
     }
 }

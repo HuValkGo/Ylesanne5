@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ül5 {
     public class CarMapper {
-        public List<Car> GetCars(List<Vechicles> data) {
+        public List<Car> GetCars(List<Vehicles> data) {
             List<Car> cars = new List<Car>();
             foreach (var d in data) {
                 if (d.Type == "Car") {

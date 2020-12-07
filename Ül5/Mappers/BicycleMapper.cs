@@ -5,9 +5,7 @@ using System.Text;
 
 namespace Ül5 {
     public class BicycleMapper {
-        private List<Vechicles> vechicles;
-
-        public List<Bicycle> GetBicycles(List<Vechicles> data) {
+        public List<Bicycle> GetBicycles(List<Vehicles> data) {
             List<Bicycle> bicycles = new List<Bicycle>();
             foreach (var d in data) {
                 if (d.Type == "Bicycle") {
