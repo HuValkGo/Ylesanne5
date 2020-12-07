@@ -24,3 +24,12 @@ C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\obj\Debug\netcoreapp3.1\Ül5.cspro
 C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\obj\Debug\netcoreapp3.1\Ül5.dll
 C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\obj\Debug\netcoreapp3.1\Ül5.pdb
 C:\Users\Kasutaja\Source\Repos\Ylesanne5\Ül5\obj\Debug\netcoreapp3.1\Ül5.genruntimeconfig.cache
+C:\Users\Kasutaja\source\repos\Ül5\Ül5\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\Kasutaja\source\repos\Ül5\Ül5\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\Kasutaja\source\repos\Ül5\Ül5\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Kasutaja\source\repos\Ül5\Ül5\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Kasutaja\source\repos\Ül5\Ül5\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Kasutaja\source\repos\Ül5\Ül5\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Kasutaja\source\repos\Ül5\Ül5\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Kasutaja\source\repos\Ül5\Ül5\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Kasutaja\source\repos\Ül5\Ül5\obj\Debug\netcoreapp3.1\Ül5.csproj.CopyComplete

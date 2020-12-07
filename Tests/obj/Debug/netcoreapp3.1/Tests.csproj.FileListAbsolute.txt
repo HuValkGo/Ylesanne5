@@ -194,3 +194,11 @@ C:\Users\Kasutaja\Source\Repos\Ylesanne5\Tests\obj\Debug\netcoreapp3.1\Tests.csp
 C:\Users\Kasutaja\Source\Repos\Ylesanne5\Tests\obj\Debug\netcoreapp3.1\Tests.dll
 C:\Users\Kasutaja\Source\Repos\Ylesanne5\Tests\obj\Debug\netcoreapp3.1\Tests.pdb
 C:\Users\Kasutaja\Source\Repos\Ylesanne5\Tests\obj\Debug\netcoreapp3.1\Tests.genruntimeconfig.cache
+C:\Users\Kasutaja\source\repos\Ül5\Tests\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\Kasutaja\source\repos\Ül5\Tests\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\Kasutaja\source\repos\Ül5\Tests\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Kasutaja\source\repos\Ül5\Tests\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Kasutaja\source\repos\Ül5\Tests\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Kasutaja\source\repos\Ül5\Tests\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Kasutaja\source\repos\Ül5\Tests\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Kasutaja\source\repos\Ül5\Tests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
