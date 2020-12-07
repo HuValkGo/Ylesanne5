@@ -25,5 +25,25 @@ namespace Ül5
             }
             return vechicles;
         }
+
+        public Vechicles findById(string id, DataTable db) {
+            Vechicles vechicle = new Vechicles();
+            for (int i = 0; i < db.Rows.Count; i++)
+            {
+                var obj = db.Rows[i].ItemArray;
+                if (id == obj[0].ToString()) {
+                    vechicle.Id = obj[0].ToString();
+                    vechicle.Manufacturer = obj[1].ToString();
+                    vechicle.NrOfPassengers = obj[2].ToString();
+                    vechicle.NrOfDoors = obj[3].ToString();
+                    vechicle.FuelTankCapacity = obj[4].ToString();
+                    vechicle.SaddleHeight = obj[5].ToString();
+                    vechicle.Type = obj[6].ToString();
+                    break;
+                }
+            }
+
+            return vechicle;
+        }
     }
 }
