@@ -35,11 +35,25 @@ namespace Tests {
         [TestMethod]
         public void VehiclesMapperTest() {
             var data = Vehicles();
-            var findByIdData = _vehiclesMapper.findById("3", db);
-
             Assert.AreEqual(4, data.Count);
-            Assert.AreEqual("3", findByIdData.Id);
-            Assert.AreEqual("Merida", findByIdData.Manufacturer);
+
+            var findByIdData = _vehiclesMapper.findById("3", db);
+            Bicycle bicycle = (Bicycle) findByIdData;
+
+            Assert.AreEqual("3", bicycle.Id);
+            Assert.AreEqual("Merida", bicycle.Manufacturer);
+            Assert.AreEqual("5.5cm",bicycle.SaddleHeight);
+
+            db.Rows.Add("4", "BMW", "7", "5", "100l", null, "Car");
+            getVehicles();
+            var newData = _vehiclesMapper.GetVehicles(db);
+            var findById2 = _vehiclesMapper.findById("4", db);
+            Car car = (Car)findById2;
+
+            Assert.AreEqual(5, newData.Count);
+            Assert.AreEqual("BMW", car.Manufacturer);
+            Assert.AreEqual("100l", car.FuelTankCapacity);
+
         }
 
         private void getVehicles() {
@@ -55,33 +69,22 @@ namespace Tests {
         public void BicycleMapperTest() {
             _bicycleMapper = new BicycleMapper();
             var data = _bicycleMapper.GetBicycles(Vehicles());
-            var findBicycleById = _bicycleMapper.findById("1", data);
 
             Assert.AreEqual(2, data.Count);
-            Assert.AreEqual("1", findBicycleById.Id);
-            Assert.AreEqual("Scott", findBicycleById.Manufacturer);
-
-
         }
 
         [TestMethod]
         public void CarMapperTest() {
             _carMapper = new CarMapper();
             var data = _carMapper.GetCars(Vehicles());
-            var findCarById = _carMapper.findById("2", data);
 
             Assert.AreEqual(2, data.Count);
-            Assert.AreEqual("2", findCarById.Id);
-            Assert.AreEqual("Audi", findCarById.Manufacturer);
-            Assert.AreEqual("4l", findCarById.FuelTankCapacity);
 
             db.Rows.Add("4", "BMW", "7", "5", "100l", null, "Car");
             getVehicles();
             var newData = _carMapper.GetCars(Vehicles());
-            var findCar2ById = _carMapper.findById("4", newData);
 
             Assert.AreEqual(3, newData.Count);
-            Assert.AreEqual("BMW", findCar2ById.Manufacturer);
         }
     }
 }

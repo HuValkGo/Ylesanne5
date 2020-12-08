@@ -8,7 +8,6 @@ namespace Ül5 {
         public List<Vehicles> GetVehicles(DataTable db) {
             List<Vehicles> vehicles = new List<Vehicles>();
             for (int i = 0; i < db.Rows.Count; i++) {
-
                 var obj = db.Rows[i].ItemArray;
                 vehicles.Add(new Vehicles() {
                     Id = obj[0].ToString(),
@@ -24,22 +23,34 @@ namespace Ül5 {
             return vehicles;
         }
 
-        public Vehicles findById(string id, DataTable db) {
-            Vehicles vehicle = new Vehicles();
+        public Vehicle findById(string id, DataTable db) {
+            var vehicle = new Vehicle();
             for (int i = 0; i < db.Rows.Count; i++) {
                 var obj = db.Rows[i].ItemArray;
+                var type = obj[6].ToString();
                 if (id == obj[0].ToString()) {
-                    vehicle.Id = obj[0].ToString();
-                    vehicle.Manufacturer = obj[1].ToString();
-                    vehicle.NrOfPassengers = obj[2].ToString();
-                    vehicle.NrOfDoors = obj[3].ToString();
-                    vehicle.FuelTankCapacity = obj[4].ToString();
-                    vehicle.SaddleHeight = obj[5].ToString();
-                    vehicle.Type = obj[6].ToString();
-                    break;
+                    if (type == "Car") {
+                        vehicle = new Car() {
+                            Id = obj[0].ToString(),
+                            Manufacturer = obj[1].ToString(),
+                            NrOfPassengers = obj[2].ToString(),
+                            NrOfDoors = obj[3].ToString(),
+                            FuelTankCapacity = obj[4].ToString()
+                        };
+                        break;
+                    }
+
+                    if (type == "Bicycle") {
+                        vehicle = new Bicycle() {
+                            Id = obj[0].ToString(),
+                            Manufacturer = obj[1].ToString(),
+                            NrOfPassengers = obj[2].ToString(),
+                            SaddleHeight = obj[5].ToString()
+                        };
+                        break;
+                    }
                 }
             }
-
             return vehicle;
         }
     }

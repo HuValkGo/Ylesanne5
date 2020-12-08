@@ -17,23 +17,8 @@ namespace Ül5 {
                     });
                 }
             }
-
             return bicycles;
         }
 
-        public Bicycle findById(string id, List<Bicycle> data) {
-            Bicycle bicycle = new Bicycle();
-            foreach (var e in data) {
-                if (id == e.Id) {
-                    bicycle.Id = e.Id;
-                    bicycle.Manufacturer = e.Manufacturer;
-                    bicycle.NrOfPassengers = e.NrOfPassengers;
-                    bicycle.SaddleHeight = e.SaddleHeight;
-                    break;
-                }
-            }
-
-            return bicycle;
-        }
     }
 }
