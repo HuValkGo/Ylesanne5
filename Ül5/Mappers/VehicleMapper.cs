@@ -4,7 +4,7 @@ using System.Data;
 using System.Text;
 
 namespace Ül5 {
-    public class VehiclesMapper {
+    public class VehicleMapper {
         public List<Vehicles> GetVehicles(DataTable db) {
             List<Vehicles> vehicles = new List<Vehicles>();
             for (int i = 0; i < db.Rows.Count; i++) {

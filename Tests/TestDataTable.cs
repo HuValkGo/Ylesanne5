@@ -8,7 +8,7 @@ using Ül5;
 namespace Tests {
     [TestClass]
     public class TestDataTable {
-        private VehiclesMapper _vehiclesMapper;
+        private VehicleMapper _vehicleMapper;
         private BicycleMapper _bicycleMapper;
         private CarMapper _carMapper;
         private DataTable db;
@@ -37,7 +37,7 @@ namespace Tests {
             var data = Vehicles();
             Assert.AreEqual(4, data.Count);
 
-            var findByIdData = _vehiclesMapper.findById("3", db);
+            var findByIdData = _vehicleMapper.findById("3", db);
             Bicycle bicycle = (Bicycle) findByIdData;
 
             Assert.AreEqual("3", bicycle.Id);
@@ -46,8 +46,8 @@ namespace Tests {
 
             db.Rows.Add("4", "BMW", "7", "5", "100l", null, "Car");
             getVehicles();
-            var newData = _vehiclesMapper.GetVehicles(db);
-            var findById2 = _vehiclesMapper.findById("4", db);
+            var newData = _vehicleMapper.GetVehicles(db);
+            var findById2 = _vehicleMapper.findById("4", db);
             Car car = (Car)findById2;
 
             Assert.AreEqual(5, newData.Count);
@@ -57,8 +57,8 @@ namespace Tests {
         }
 
         private void getVehicles() {
-            _vehiclesMapper = new VehiclesMapper();
-            _vehicles = _vehiclesMapper.GetVehicles(db);
+            _vehicleMapper = new VehicleMapper();
+            _vehicles = _vehicleMapper.GetVehicles(db);
         }
 
         private List<Vehicles> Vehicles() {
